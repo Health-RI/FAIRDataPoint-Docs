@@ -22,7 +22,7 @@ copyright = '2024, FAIR Data Team'
 author = 'FAIR Data Team'
 
 # The full version, including alpha/beta/rc tags
-release = '1.16'
+release = '1.17'
 
 
 rst_prolog = f"""

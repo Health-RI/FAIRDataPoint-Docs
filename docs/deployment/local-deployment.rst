@@ -24,7 +24,7 @@ Here is an example of the simplest `Docker Compose <https://docs.docker.com/comp
                 - FDP_HOST=fdp
 
         mongo:
-            image: mongo:4.0.12
+            image: mongo:8.0
 
 
 Then you can run it using ``docker compose up -d``. It might take a while to start. You can run ``docker compose logs -f`` to follow the output log. Once you see a message, that the application started, the FAIR Data Point should be working, and you can open http://localhost.
@@ -79,7 +79,7 @@ Then, we need to mount the application config into the FDP container and update 
                 - FDP_HOST=fdp
 
         mongo:
-            image: mongo:4.0.12
+            image: mongo:8.0
 
 
 Persistence
@@ -115,7 +115,7 @@ Here is the updated docker compose file:
                 - FDP_HOST=fdp
 
         mongo:
-            image: mongo:4.0.12
+            image: mongo:8.0
             ports:
                 - 27017:27017
             volumes:
@@ -166,14 +166,14 @@ We now need to update our ``compose.yml`` file, we add a new volume for the ``fd
                 - FDP_HOST=fdp
 
         mongo:
-            image: mongo:4.0.12
+            image: mongo:8.0
             ports:
                 - 27017:27017
             volumes:
                 - ./mongo/data:/data/db
 
         graphdb:
-            image: ontotext/graphdb:10.7.6
+            image: ontotext/graphdb:10.8.7
             ports:
                 - 7200:7200
             volumes:

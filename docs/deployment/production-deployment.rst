@@ -114,14 +114,14 @@ We have certificates generated and configuration for proxy ready. Now we need to
                 - FDP_HOST=fdp
 
         mongo:
-            image: mongo:4.0.12
+            image: mongo:8.0
             ports:
               - "127.0.0.1:27017:27017"
             volumes:
                 - ./mongo/data:/data/db
 
         graphdb:
-            image: ontotext/graphdb:10.7.6
+            image: ontotext/graphdb:10.8.7
             volumes:
                 - ./graphdb:/opt/graphdb/home
 
